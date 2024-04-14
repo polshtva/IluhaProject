@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_options">
+        <item>Спектакль</item>
+        <item>Концерт</item>
+        <item>Фестиваль</item>
+        <item>Выставка</item>
+        <item>Мастер-класс</item>
+        <item>Квест</item>
+    </string-array>
+
+    <string name="select_type">Выберите тип мероприятия</string>
+
+</resources>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EvActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/blockDataPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/imgData"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-5dp"
+               />
+
+            <RelativeLayout
+                android:id="@+id/blockPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#66000000"
+                >
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/backstr" />
+
+                <ImageButton
+                    android:id="@+id/buttonSave"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/sohr_bl"
+                    android:src="@drawable/sohr"
+                    android:clickable="true"
+                    />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/blockData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blockDataPic"
+            android:layout_marginTop="-30dp"
+            android:layout_marginHorizontal="40dp"
+            android:elevation="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardUseCompatPadding="true"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/btnColor"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/roboto_medium"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blockData"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:textColor="#120D26"
+            android:textSize="35dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/decBlock1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="24dp"
+            >
+            <RelativeLayout
+                android:id="@+id/blockTime"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/border_block_icn"
+                >
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="9dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/calendar" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="-4dp"
+                android:layout_toEndOf="@+id/blockTime"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/blockTime"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/btnColor"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/decBlock2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/decBlock1"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="24dp"
+            >
+            <RelativeLayout
+                android:id="@+id/blockLoc"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/border_block_icn"
+                >
+
+                <ImageView
+                    android:id="@+id/iconLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="9dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/location" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@+id/blockLoc"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_below="@id/decBlock2"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#0D0C26"
+            />
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/btn_active"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="10dp"
+            android:text="Купить билет"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </RelativeLayout>
+</ScrollView>

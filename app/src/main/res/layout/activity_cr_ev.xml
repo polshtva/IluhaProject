@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".crEv">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+
+            android:text="Создать мероприятие"
+            android:textColor="@color/btnColor"
+            android:textSize="50dp" />
+
+        <EditText
+            android:id="@+id/editId_ev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_empty"
+            android:hint="Идентификатор мероприятия"
+            android:inputType="text"
+            android:padding="10dp" />
+        <EditText
+            android:id="@+id/editTextEventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editId_ev"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_empty"
+            android:hint="Название мероприятия"
+            android:inputType="text"
+            android:padding="10dp" />
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/input_empty"
+            android:padding="10sp"
+            android:layout_below="@+id/editTextEventName"
+            android:entries="@array/type_options"
+            android:prompt="@string/select_type"/>
+
+
+        <EditText
+            android:id="@+id/editTextEventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="Описание мероприятия"
+            android:layout_marginTop="10dp"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:layout_below="@+id/spinnerGender"
+            android:background="@drawable/input_empty"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/textAddPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить фото"
+            android:layout_below="@id/editTextEventDescription"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/btnColor"
+            />
+
+        <ImageView
+            android:id="@+id/addPhoto"
+            android:layout_width="245dp"
+            android:layout_height="242dp"
+            android:layout_below="@+id/textAddPhoto"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="64dp"
+            android:foregroundGravity="center"
+            android:src="@drawable/camera_photos" />
+
+        <EditText
+            android:id="@+id/editTextEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Время мероприятия (например, 14:30)"
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_below="@id/addPhoto"
+            android:background="@drawable/input_empty"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дата мероприятия (например, 01.01.2025)"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_below="@id/editTextEventTime"
+            android:background="@drawable/input_empty"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Цена"
+            android:inputType="number"
+            android:padding="10dp"
+            android:layout_below="@id/editTextEventDate"
+            android:background="@drawable/input_empty"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextEventAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Адрес мероприятия"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_below="@+id/editTextPrice"
+            android:background="@drawable/input_empty"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <Button
+            android:id="@+id/buttonCreateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEventAddress"
+            android:text="Создать мероприятие"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_active"
+            android:layout_marginBottom="58dp"/>
+
+    </RelativeLayout>
+</ScrollView>

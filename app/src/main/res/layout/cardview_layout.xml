@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardJakone"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="20dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageNew"
+            android:layout_width="129dp"
+            android:layout_height="129dp"
+            android:src="@drawable/img_event" />
+
+        <TextView
+            android:id="@+id/dataNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="74dp"
+            android:layout_toEndOf="@+id/imageNew"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/btnColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nameNew"
+            android:layout_width="163dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/dataNew"
+            android:layout_alignEnd="@+id/dataNew"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="-16dp"
+            android:layout_toEndOf="@+id/imageNew"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/typeNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameNew"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="13dp"
+            android:textColor="@color/btnColor"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

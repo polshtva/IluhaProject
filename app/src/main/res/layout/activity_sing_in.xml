@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingIn">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/logo"
+        />
+
+    <RelativeLayout
+        android:id="@+id/container_SingIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="30dp"
+        >
+
+        <TextView
+            android:id="@+id/textMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Авторизоваться"
+            style="@style/textTitle"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/textMain"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/input_empty"
+            android:hint="abc@email.com"
+            android:textColorHint="@color/hintColor"
+            android:paddingLeft="51dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:inputType="textEmailAddress"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editEmail"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/email" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/editEmail"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/input_empty"
+            android:hint="*************"
+            android:textColorHint="@color/hintColor"
+            android:paddingLeft="51dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            />
+
+        <ImageView
+            android:id="@+id/viewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editPassword"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/view_pas" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editPassword"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_pass" />
+
+        <RelativeLayout
+            android:id="@+id/acData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editPassword"
+            android:layout_marginTop="20dp">
+
+            <Switch
+                android:id="@+id/switchRem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:switchPadding="5dp"
+                android:text="Remember Me"
+                android:thumbTint="#CF4D4F" />
+
+            <TextView
+                android:id="@+id/linkForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="0dp"
+                android:text="Forgot Password?" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSingIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acData"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_active"
+            android:text="Войти"
+            android:enabled="false"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSingIn"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="ИЛИ"
+            android:textColor="#9D9898"
+            android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/blockGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:elevation="30dp"
+            app:cardCornerRadius="12dp"
+            android:layout_marginTop="15dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="14dp"
+                >
+
+                <ImageView
+                    android:id="@+id/icGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/google" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/icGoogle"
+                    android:layout_marginLeft="20dp"
+                    android:text="Войти через Google"
+                    style="@style/textTitle"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/blockSingUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/blockGoogle"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="У вас нет аккаунта? "
+                style="@style/textTitle"
+                />
+            <TextView
+                android:id="@+id/linkSingUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Зарегистрироваться"
+                android:textColor="@color/btnColor"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

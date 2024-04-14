@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptCode">
+
+    <TextView
+        android:id="@+id/titleSingIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Проверка OTP"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="24sp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textSingIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleSingIn"
+        android:layout_marginLeft="24sp"
+        android:layout_marginTop="8sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Введите 6-значные номера, отправленные вам на электронную почту"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCode"
+        android:layout_width="377dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/textSingIn"
+        android:layout_marginHorizontal="24sp"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/code"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingTop="8sp"
+            android:paddingRight="12sp"
+            android:paddingBottom="8sp"
+            android:hint="0" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/code"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingTop="8sp"
+            android:paddingRight="12sp"
+            android:paddingBottom="8sp"
+            android:hint="0"
+       />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/code"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingTop="8sp"
+            android:paddingRight="12sp"
+            android:paddingBottom="8sp"
+            android:hint="0"
+           />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/code"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingTop="8sp"
+            android:paddingRight="12sp"
+            android:paddingBottom="8sp"
+            android:hint="0"
+            />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/code"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingTop="8sp"
+            android:paddingRight="12sp"
+            android:paddingBottom="8sp"
+            android:hint="0" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/code"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingTop="8sp"
+            android:paddingRight="12sp"
+            android:paddingBottom="8sp"
+            android:hint="0" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/textBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutCode"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textSingUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="8dp"
+            android:text="Если вы не получили код, "
+            android:textSize="14sp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/linkLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_toEndOf="@+id/textSingUp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start"
+            android:text="повторно отправлять"
+            android:textColor="@color/btnColor"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/buttonLogIntoHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textBlock"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="84sp"
+        android:text="Установить новый пароль"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_active"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        app:cornerRadius="4dp" />
+
+</RelativeLayout>

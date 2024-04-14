@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragmentsHome.FavoriteFragment">
+
+    <RelativeLayout
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:background="@drawable/board_disign">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/logo2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохраненные мероприятия"
+            android:layout_below="@id/imgLogo"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollEvants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/block"
+        android:layout_marginBottom="20dp"
+        >
+        <LinearLayout
+            android:id="@+id/events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/block"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddams"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/addams" />
+
+                    <TextView
+                        android:id="@+id/data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="62dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="27.04.2024 18:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/data"
+                        android:layout_alignEnd="@+id/data"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="-3dp"
+                        android:text="Семейка Аддамс"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Спектакль"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardJakone"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/j" />
+
+                    <TextView
+                        android:id="@+id/data2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="74dp"
+                        android:layout_toEndOf="@+id/image2"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="2.06.2024 20:30"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_width="163dp"
+                        android:layout_height="38dp"
+                        android:layout_below="@+id/data2"
+                        android:layout_alignEnd="@+id/data2"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="-16dp"
+                        android:layout_toEndOf="@+id/image2"
+                        android:text="Jakone &amp; A.V.G"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="-3dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Концерт"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardZem"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="138dp"
+                        android:layout_height="94dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/zem" />
+
+                    <TextView
+                        android:id="@+id/data3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="62dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="20.05.2024, 20:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/data3"
+                        android:layout_alignEnd="@+id/data3"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="72dp"
+                        android:layout_toEndOf="@+id/image3"
+                        android:text="Земфира"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Концерт"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSibF"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/sibf" />
+
+                    <TextView
+                        android:id="@+id/data4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginEnd="21dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="21.04.2024-22.04.2024 18:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/name4"
+                        android:layout_width="190dp"
+                        android:layout_height="57dp"
+                        android:layout_below="@+id/data4"
+                        android:layout_alignEnd="@+id/data4"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:text="Сибирский гастрономический фестиваль"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/type4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name4"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Фестиваль"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEvOn"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/onegin" />
+
+                    <TextView
+                        android:id="@+id/data5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="62dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="23.04.2024 19:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/data5"
+                        android:layout_alignEnd="@+id/data5"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="-3dp"
+                        android:text="Евгений Онегин"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name5"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Спектакль"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carddin"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/din" />
+
+                    <TextView
+                        android:id="@+id/data6"
+                        android:layout_width="213dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toEndOf="@+id/image6"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="24.04.2024 - 14.05.2024, 10:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/name6"
+                        android:layout_width="218dp"
+                        android:layout_height="49dp"
+                        android:layout_below="@+id/data6"
+                        android:layout_alignEnd="@+id/data6"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="-3dp"
+                        android:layout_toEndOf="@+id/image6"
+                        android:text="Мир динозавров"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name6"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Выставка"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardmasterCl"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/masterclass" />
+
+                    <TextView
+                        android:id="@+id/data7"
+                        android:layout_width="213dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toEndOf="@+id/image7"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="26.04.2024, 12:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name7"
+                        android:layout_width="205dp"
+                        android:layout_height="52dp"
+                        android:layout_below="@+id/data7"
+                        android:layout_alignEnd="@+id/data7"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@+id/image7"
+                        android:text="Мастер-класс по росписи пасхальных яиц"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name7"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Мастер-класс"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSocrTob"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image8"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/sokrtb" />
+
+                    <TextView
+                        android:id="@+id/data8"
+                        android:layout_width="213dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toEndOf="@+id/image8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="27.06.2024, 14:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name8"
+                        android:layout_width="205dp"
+                        android:layout_height="52dp"
+                        android:layout_below="@+id/data8"
+                        android:layout_alignEnd="@+id/data8"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@+id/image8"
+                        android:text="В поисках сокровищ Тобольска"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name8"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Квест"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMum"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image9"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/mum" />
+
+                    <TextView
+                        android:id="@+id/data9"
+                        android:layout_width="213dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toEndOf="@+id/image9"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="28.04.2024, 19:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name9"
+                        android:layout_width="205dp"
+                        android:layout_height="52dp"
+                        android:layout_below="@+id/data9"
+                        android:layout_alignEnd="@+id/data9"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@+id/image9"
+                        android:text="Мумий Тролль"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name9"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Концерт"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLOz"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#53599012"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                android:elevation="20dp"
+                android:padding="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image10"
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/leboz" />
+
+                    <TextView
+                        android:id="@+id/data10"
+                        android:layout_width="213dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_toEndOf="@+id/image10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="30.04.2024, 19:00"
+                        android:textColor="@color/btnColor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/name10"
+                        android:layout_width="205dp"
+                        android:layout_height="52dp"
+                        android:layout_below="@+id/data10"
+                        android:layout_alignEnd="@+id/data10"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@+id/image10"
+                        android:text="Лебединое озеро"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/type10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name10"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="Спектакль"
+                        android:textColor="@color/btnColor"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

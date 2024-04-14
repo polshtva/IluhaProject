@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".fragmentsHome.SettingsFragment">
+
+<TextView
+    android:id="@+id/textHello"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Привет,"
+    android:gravity="center"
+    android:textColor="@color/btnColor"
+    android:textSize="30dp"
+    android:fontFamily="@font/roboto_medium"
+    />
+
+    <Switch
+        android:id="@+id/theme_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Поменять тему"
+        android:textOff="Light Theme"
+        android:textOn="Dark Theme" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        >
+    <EditText
+    android:id="@+id/user_name_edit_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:hint="Name"
+    android:background="@drawable/input_empty"
+        android:padding="10dp"
+        />
+
+<EditText
+    android:id="@+id/login_edit_text"
+    android:layout_width="match_parent"
+    android:layout_below="@id/user_name_edit_text"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/input_empty"
+    android:padding="10dp"
+    android:hint="Login" />
+
+<EditText
+    android:id="@+id/password_edit_text"
+    android:layout_width="match_parent"
+    android:layout_below="@id/login_edit_text"
+    android:layout_height="wrap_content"
+    android:hint="Password"
+    android:layout_marginTop="10dp"
+    android:inputType="textPassword"
+    android:background="@drawable/input_empty"
+    android:padding="10dp"
+    />
+
+        <Button
+            android:id="@+id/btnSingIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_edit_text"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_active"
+            android:text="Изменить данные"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+</LinearLayout>
+
